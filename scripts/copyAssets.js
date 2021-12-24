@@ -9,7 +9,6 @@ const paths = {
 		imageAssets: './src/assets/img',
 		logoAssets: './src/assets/logos',
 		jsonAssets: './src/assets/json',
-		logoAssets: './src/assets/logos',
 	},
 };
 

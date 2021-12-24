@@ -24,6 +24,9 @@ class LevelTwo extends Phaser.Scene {
 		this.load.tilemapTiledJSON('map2', './assets/map_2.json');
 		this.load.atlas('atlas', './assets/mario-atlas.png', './assets/mario-atlas.json');
 
+		this.load.image('rocketmedia', './assets/logo-rocketmedia.png');
+		this.load.image('escriba', './assets/logo-escriba.png');
+
 		this.load.on('complete', () => {
 			generateAnimations(this);
 		});
@@ -44,6 +47,9 @@ class LevelTwo extends Phaser.Scene {
 			fontSize: '60px',
 			color: 'black',
 		});
+
+		this.add.image(400, 90, 'rocketmedia');
+		this.add.image(600, 90, 'escriba');
 
 		this.player = new Player(this, 25, 400).collideWith(this.platform);
 		this.goombas = new Goomba(this).collideWith(this.platform);
