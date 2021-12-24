@@ -3,6 +3,7 @@ import Phaser from 'phaser';
 import * as levels from './scenes/levels';
 import StartGame from './scenes/StartGame';
 import GameOver from './scenes/GameOver';
+import Completed from './scenes/Completed';
 
 import './assets/scss/index.scss';
 
@@ -33,6 +34,7 @@ const config = {
 		levels.Nine,
 		levels.Ten,
 		GameOver,
+		Completed,
 	],
 };
 

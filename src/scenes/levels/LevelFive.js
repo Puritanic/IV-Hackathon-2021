@@ -7,7 +7,6 @@ import Flag from '../../gameObjects/Flag';
 
 import tiles from '../../config/tiles';
 import generateAnimations from '../../config/animations';
-import increaseLevel from '../../ui/increaseLevel';
 
 class LevelFive extends Phaser.Scene {
 	constructor() {
@@ -71,7 +70,7 @@ class LevelFive extends Phaser.Scene {
 	}
 
 	onLevelEnd() {
-		this.scene.scene.input.keyboard.shutdown();
+		this.scene.start('Completed');
 	}
 }
 
