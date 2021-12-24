@@ -5,7 +5,7 @@
 	"scripts": {
 		"start": "rm -rf dist/ && yarn copy:assets && parcel -p 8000 --dist-dir dist",
 		"copy:assets": "node ./scripts/copyAssets.js",
-		"build": "rm -rf dist/ && yarn parcel build src/index.html --dist-dir dist",
+		"build": "rm -rf dist/ && yarn copy:assets && yarn parcel build src/index.html --dist-dir dist",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"license": "MIT",

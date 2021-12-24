@@ -18,11 +18,11 @@ jobs:
 
       - name: Build React App
         run: |
-          npm install # Install Dependencies
-          CI=false npm run build # CI=false to ignore warnings
+          yarn # Install Dependencies
+          CI=false yarn build # CI=false to ignore warnings
 
       - name: Install Surge
-        run: npm install -g surge
+        run: yarn global add surge
 
       - name: Deploy to Surge
         run:  surge ./dist https://nesnadjeni.surge.sh --token ${{secrets.SURGE_TOKEN}}
