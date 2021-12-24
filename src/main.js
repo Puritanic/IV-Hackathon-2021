@@ -9,7 +9,7 @@ import './assets/scss/index.scss';
 const config = {
 	type: Phaser.AUTO,
 	width: 800,
-	height: 480,
+	height: 600,
 	pixelArt: true,
 	backgroundColor: '#FFFFAC',
 	parent: 'mario',

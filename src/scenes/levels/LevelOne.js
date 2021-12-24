@@ -26,6 +26,7 @@ class LevelOne extends Phaser.Scene {
 
 		this.load.image('swiss', './assets/swiss.png');
 		this.load.image('rs', './assets/rs.png');
+		this.load.image('interventure', './assets/logo-interventure.png');
 		this.load.image('mediatech', './assets/logo-mediatech.png');
 
 		this.load.on('complete', () => {
@@ -48,7 +49,8 @@ class LevelOne extends Phaser.Scene {
 
 		this.add.image(180, 90, 'swiss');
 		this.add.image(280, 90, 'rs');
-		this.add.image(450, 90, 'mediatech');
+		this.add.image(450, 90, 'interventure');
+		this.add.image(700, 90, 'mediatech');
 
 		this.map.createLayer('background', this.tileset, 0, 0);
 		this.platform.setCollisionByExclusion(noCollisionTiles, true);
