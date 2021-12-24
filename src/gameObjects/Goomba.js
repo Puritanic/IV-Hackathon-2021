@@ -1,4 +1,5 @@
 import increaseScore from '../ui/increaseScore';
+import toggleMetadata from '../ui/toggleMetadata';
 
 class Goomba {
 	constructor(scene) {
@@ -69,6 +70,7 @@ class Goomba {
 		this.scene.physics.world.removeCollider(this.collider);
 
 		setTimeout(() => {
+			toggleMetadata(false);
 			this.scene.scene.start('GameOver');
 		}, 1500);
 	}
