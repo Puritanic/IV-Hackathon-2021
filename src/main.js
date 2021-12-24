@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 
 import * as levels from './scenes/levels';
+import StartGame from './scenes/StartGame';
 import GameOver from './scenes/GameOver';
 
 import './assets/scss/index.scss';
@@ -20,6 +21,7 @@ const config = {
 		},
 	},
 	scene: [
+		StartGame,
 		levels.One,
 		levels.Two,
 		levels.Three,

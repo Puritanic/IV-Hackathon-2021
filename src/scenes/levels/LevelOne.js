@@ -12,7 +12,7 @@ import increaseLevel from '../../ui/increaseLevel';
 
 class LevelOne extends Phaser.Scene {
 	constructor() {
-		super({ active: true, key: 'LevelOne' });
+		super('LevelOne');
 	}
 
 	// Tileset by https://www.deviantart.com/thecrushedjoycon/art/Super-Mario-Bros-Mega-Tileset-Ver-2-842092790

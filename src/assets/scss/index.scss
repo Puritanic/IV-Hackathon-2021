@@ -19,6 +19,10 @@ label {
 	left: 10px;
 }
 
+.metadata {
+	visibility: hidden;
+}
+
 .score, .level {
 	position: absolute;
 	font-size: 21px;

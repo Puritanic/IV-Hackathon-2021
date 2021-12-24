@@ -7,6 +7,7 @@ const paths = {
 	},
 	src: {
 		imageAssets: './src/assets/img',
+		logoAssets: './src/assets/logos',
 		jsonAssets: './src/assets/json',
 		logoAssets: './src/assets/logos',
 	},
@@ -18,6 +19,7 @@ if (!fs.existsSync(paths.dist.root)) {
 
 if (!fs.existsSync(paths.dist.assets)) {
 	const imageAssets = fs.readdirSync(paths.src.imageAssets);
+	const logoAssets = fs.readdirSync(paths.src.logoAssets);
 	const jsonAssets = fs.readdirSync(paths.src.jsonAssets);
 	const logoAssets = fs.readdirSync(paths.src.logoAssets);
 
@@ -25,6 +27,10 @@ if (!fs.existsSync(paths.dist.assets)) {
 
 	for (const asset of imageAssets) {
 		fs.copyFileSync(`${paths.src.imageAssets}/${asset}`, `${paths.dist.assets}/${asset}`);
+	}
+
+	for (const asset of logoAssets) {
+		fs.copyFileSync(`${paths.src.logoAssets}/${asset}`, `${paths.dist.assets}/${asset}`);
 	}
 
 	for (const asset of jsonAssets) {
