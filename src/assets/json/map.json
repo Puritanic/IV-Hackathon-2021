@@ -1,11 +1,5 @@
 {
 	"compressionlevel": -1,
-	"editorsettings": {
-		"export": {
-			"format": "json",
-			"target": "map.json"
-		}
-	},
 	"height": 30,
 	"infinite": false,
 	"layers": [
@@ -53,6 +47,36 @@
 					"width": 16,
 					"x": 1216,
 					"y": 320
+				}
+			],
+			"opacity": 1,
+			"type": "objectgroup",
+			"visible": true,
+			"x": 0,
+			"y": 0
+		},
+		{
+			"draworder": "topdown",
+			"id": 6,
+			"name": "year",
+			"objects": [
+				{
+					"height": 50.84,
+					"id": 21,
+					"name": "",
+					"rotation": 0,
+					"text": {
+						"bold": true,
+						"fontfamily": "Arial Black",
+						"pixelsize": 36,
+						"text": "2017",
+						"wrap": true
+					},
+					"type": "",
+					"visible": true,
+					"width": 100.63,
+					"x": 18.0174293008641,
+					"y": 18.75
 				}
 			],
 			"opacity": 1,
@@ -218,11 +242,11 @@
 			"y": 0
 		}
 	],
-	"nextlayerid": 6,
-	"nextobjectid": 21,
+	"nextlayerid": 7,
+	"nextobjectid": 23,
 	"orientation": "orthogonal",
 	"renderorder": "right-down",
-	"tiledversion": "1.4.3",
+	"tiledversion": "1.7.2",
 	"tileheight": 16,
 	"tilesets": [
 		{
@@ -236,11 +260,12 @@
 			"spacing": 1,
 			"tilecount": 5112,
 			"tileheight": 16,
-			"tilewidth": 16
+			"tilewidth": 16,
+			"transparentcolor": "#ff00ff"
 		}
 	],
 	"tilewidth": 16,
 	"type": "map",
-	"version": 1.4,
+	"version": "1.6",
 	"width": 80
 }
