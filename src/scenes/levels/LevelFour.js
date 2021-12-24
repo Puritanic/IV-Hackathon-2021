@@ -24,6 +24,12 @@ class LevelFour extends Phaser.Scene {
 		this.load.tilemapTiledJSON('map4', './assets/map_4.json');
 		this.load.atlas('atlas', './assets/mario-atlas.png', './assets/mario-atlas.json');
 
+		this.load.image('CarForYou', './assets/logo-carforyou.png');
+		this.load.image('Flaschenpost', './assets/logo-flaschenpost.png');
+		this.load.image('Akenza', './assets/logo-akenza.png');
+		this.load.image('Dericon', './assets/logo-dericon.png');
+		this.load.image('Redbox', './assets/logo-redbox.png');
+
 		this.load.on('complete', () => {
 			generateAnimations(this);
 		});
@@ -44,6 +50,12 @@ class LevelFour extends Phaser.Scene {
 			fontSize: '60px',
 			color: 'black',
 		});
+
+		this.add.image(400, 90, 'CarForYou');
+		this.add.image(600, 90, 'Flaschenpost');
+		this.add.image(800, 90, 'Akenza');
+		this.add.image(1000, 90, 'Dericon');
+		this.add.image(1200, 90, 'Redbox');
 
 		this.player = new Player(this, 25, 300).collideWith(this.platform);
 		this.goombas = new Goomba(this).collideWith(this.platform);

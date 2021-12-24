@@ -24,6 +24,12 @@ class LevelFive extends Phaser.Scene {
 		this.load.tilemapTiledJSON('map5', './assets/map_5.json');
 		this.load.atlas('atlas', './assets/mario-atlas.png', './assets/mario-atlas.json');
 
+		this.load.image('Geschenkparadies', './assets/logo-geschenkparadies.png');
+		this.load.image('Adition', './assets/logo-adition.png');
+		this.load.image('Aspen', './assets/logo-Aspen.png');
+		this.load.image('Icon', './assets/logo-iconsolutions.png');
+		this.load.image('Twint', './assets/logo-twint.png');
+
 		this.load.on('complete', () => {
 			generateAnimations(this);
 		});
@@ -39,11 +45,17 @@ class LevelFive extends Phaser.Scene {
 		this.map.createLayer('background', this.tileset, 0, 0);
 		this.platform.setCollisionByExclusion(noCollisionTiles, true);
 
-		this.add.text(100, 0, '2019-2020', {
+		this.add.text(100, 0, '2019-2021', {
 			fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif',
 			fontSize: '60px',
 			color: 'black',
 		});
+
+		this.add.image(400, 90, 'Geschenkparadies');
+		this.add.image(600, 90, 'Adition');
+		this.add.image(800, 90, 'Aspen');
+		this.add.image(1000, 90, 'Icon');
+		this.add.image(1200, 90, 'Twint');
 
 		this.player = new Player(this, 25, 300).collideWith(this.platform);
 		this.goombas = new Goomba(this).collideWith(this.platform);

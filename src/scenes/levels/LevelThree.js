@@ -23,6 +23,7 @@ class LevelThree extends Phaser.Scene {
 		this.load.image('tiles', './assets/tiles.png');
 		this.load.tilemapTiledJSON('map3', './assets/map_3.json');
 		this.load.atlas('atlas', './assets/mario-atlas.png', './assets/mario-atlas.json');
+		this.load.image('gogo', './assets/logo-gogo.png');
 
 		this.load.on('complete', () => {
 			generateAnimations(this);
@@ -44,6 +45,8 @@ class LevelThree extends Phaser.Scene {
 			fontSize: '60px',
 			color: 'black',
 		});
+
+		this.add.image(400, 90, 'gogo');
 
 		this.player = new Player(this, 25, 300).collideWith(this.platform);
 		this.goombas = new Goomba(this).collideWith(this.platform);
