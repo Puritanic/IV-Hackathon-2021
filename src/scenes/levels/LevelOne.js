@@ -36,12 +36,11 @@ class LevelOne extends Phaser.Scene {
 		this.tileset = this.map.addTilesetImage('map-tileset', 'tiles');
 		this.platform = this.map.createLayer('platform', this.tileset, 0, 0);
 
-		this.add.text(40, 40, '2011', {
+		this.add.text(100, 0, '2011-2012', {
 			fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif',
-			fontSize: '32px',
+			fontSize: '60px',
+			color: 'black',
 		});
-
-		new Text(this.map, 50, 50, '2011', { fontSize: '32px', fill: '#fff' });
 
 		this.map.createLayer('background', this.tileset, 0, 0);
 		this.platform.setCollisionByExclusion(noCollisionTiles, true);
