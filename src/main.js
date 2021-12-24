@@ -10,7 +10,7 @@ const config = {
 	width: 800,
 	height: 600,
 	pixelArt: true,
-	backgroundColor: '#FFFFAC',
+	backgroundColor: '#87CEEB',
 	parent: 'mario',
 	physics: {
 		default: 'arcade',
