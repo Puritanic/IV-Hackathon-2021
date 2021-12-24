@@ -27,6 +27,8 @@ class LevelOne extends Phaser.Scene {
 		this.load.image('rs', './assets/rs.png');
 		this.load.image('interventure', './assets/logo-interventure.png');
 		this.load.image('mediatech', './assets/logo-mediatech.png');
+		this.load.image('marko', './assets/marko_iv.png');
+		this.load.image('mirko', './assets/mirko_iv.png');
 
 		this.load.on('complete', () => {
 			generateAnimations(this);
@@ -47,6 +49,8 @@ class LevelOne extends Phaser.Scene {
 		});
 
 		this.add.image(180, 90, 'swiss');
+		this.add.image(180, 140, 'mirko');
+		this.add.image(280, 140, 'marko');
 		this.add.image(280, 90, 'rs');
 		this.add.image(450, 90, 'interventure');
 		this.add.image(700, 90, 'mediatech');
