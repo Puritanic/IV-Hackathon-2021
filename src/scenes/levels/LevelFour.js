@@ -1,7 +1,6 @@
 import Phaser from 'phaser';
 
 import Player from '../../gameObjects/Player';
-import Debugger from '../../gameObjects/Debugger';
 import Goomba from '../../gameObjects/Goomba';
 import Coin from '../../gameObjects/Coin';
 import Flag from '../../gameObjects/Flag';
@@ -61,7 +60,6 @@ class LevelFour extends Phaser.Scene {
 		this.goombas = new Goomba(this).collideWith(this.platform);
 		this.coins = new Coin(this).collideWith(this.player.sprite);
 		this.flag = new Flag(this);
-		this.debugger = new Debugger(this);
 
 		this.inputs = this.input.keyboard.createCursorKeys();
 	}
@@ -70,7 +68,6 @@ class LevelFour extends Phaser.Scene {
 		this.player.update(this.inputs);
 		this.goombas.update();
 		this.coins.update();
-		this.debugger.debuggerEnabled && this.debugger.update();
 	}
 
 	onLevelEnd() {
