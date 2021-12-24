@@ -19,11 +19,18 @@ label {
 	left: 10px;
 }
 
-.score {
+.score, .level {
 	position: absolute;
 	font-size: 21px;
-	top: 10px;
 	left: 10px;
+}
+
+.level {
+	top: 10px;
+}
+
+.score {
+	top: 40px;
 }
 
 .game-over {

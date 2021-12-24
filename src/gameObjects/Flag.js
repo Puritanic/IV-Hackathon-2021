@@ -1,11 +1,12 @@
 class Flag {
 	constructor(scene) {
-		const flagObject = scene.map.getObjectLayer('flag').objects[0];
-		const flagCoordinates = scene.tileset.texCoordinates[962]; // 962 is the tile index in tiled for the flag
-		const flagRoot = scene.platform.getTileAt(75, 23); // Get the root of the flag with tile pos
-
 		this.scene = scene;
-		this.sprite = scene.add
+
+		const flagObject = this.scene.map.getObjectLayer('flag').objects[0];
+		const flagCoordinates = this.scene.tileset.texCoordinates[962]; // 962 is the tile index in tiled for the flag
+		const flagRoot = this.scene.platform.getTileAt(75, 23); // Get the root of the flag with tile pos
+
+		this.sprite = this.scene.add
 			.tileSprite(flagObject.x, flagObject.y, 16, 16, 'tiles')
 			.setOrigin(0, 1)
 			.setTilePosition(flagCoordinates.x, flagCoordinates.y);
@@ -14,7 +15,7 @@ class Flag {
 			flagRoot.collisionCallback = null; // Set to null to make sure the callback only runs once
 
 			// More configuration options can be found on https://rexrainbow.github.io/phaser3-rex-notes/docs/site/particles/
-			const particles = scene.add.particles('atlas', 'mario-atlas_13');
+			const particles = this.scene.add.particles('atlas', 'mario-atlas_13');
 			const emitter = particles.createEmitter({
 				x: flagObject.x,
 				y: flagObject.y - flagObject.height,
@@ -25,7 +26,7 @@ class Flag {
 				alpha: 0.5,
 			});
 
-			scene.tweens.add({
+			this.scene.tweens.add({
 				targets: this.sprite,
 				ease: 'Linear',
 				y: '+=60',
@@ -33,7 +34,7 @@ class Flag {
 				onComplete: () => emitter.stop(),
 			});
 
-			this.scene.input.keyboard.shutdown();
+			this.scene.onLevelEnd();
 		});
 	}
 }

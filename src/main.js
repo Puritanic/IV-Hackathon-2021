@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-import HelloWorldScene from './scenes/HelloWorldScene';
+import * as levels from './scenes/levels'
 import GameOver from './scenes/GameOver';
 
 import './assets/scss/index.scss';
@@ -19,7 +19,19 @@ const config = {
 			gravity: { y: 600 },
 		},
 	},
-	scene: [HelloWorldScene, GameOver],
+	scene: [
+        levels.One,
+        levels.Two,
+        levels.Three,
+        levels.Four,
+        levels.Five,
+        levels.Six,
+        levels.Seven,
+        levels.Eight,
+        levels.Nine,
+        levels.Ten,
+        GameOver
+    ],
 };
 
 export default new Phaser.Game(config);

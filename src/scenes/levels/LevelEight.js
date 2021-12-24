@@ -1,17 +1,18 @@
 import Phaser from 'phaser';
 
-import Player from '../gameObjects/Player';
-import Debugger from '../gameObjects/Debugger';
-import Goomba from '../gameObjects/Goomba';
-import Coin from '../gameObjects/Coin';
-import Flag from '../gameObjects/Flag';
+import Player from '../../gameObjects/Player';
+import Debugger from '../../gameObjects/Debugger';
+import Goomba from '../../gameObjects/Goomba';
+import Coin from '../../gameObjects/Coin';
+import Flag from '../../gameObjects/Flag';
 
-import tiles from '../config/tiles';
-import generateAnimations from '../config/animations';
+import tiles from '../../config/tiles';
+import generateAnimations from '../../config/animations';
+import increaseLevel from '../../ui/increaseLevel';
 
-class Game extends Phaser.Scene {
+class LevelEight extends Phaser.Scene {
 	constructor() {
-		super('Game');
+		super('LevelEight');
 	}
 
 	// Tileset by https://www.deviantart.com/thecrushedjoycon/art/Super-Mario-Bros-Mega-Tileset-Ver-2-842092790
@@ -53,6 +54,11 @@ class Game extends Phaser.Scene {
 		this.coins.update();
 		this.debugger.debuggerEnabled && this.debugger.update();
 	}
+
+	onLevelEnd() {
+		increaseLevel();
+		this.scene.start('LevelNine');
+	}
 }
 
-export default Game;
+export default LevelEight;
